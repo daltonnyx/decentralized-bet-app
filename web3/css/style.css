@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@300;400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  /* needed for demo only */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* needed for demo only */
+  height: 100%;
+  background-color: #abb8c8;
+  font: 16px "Inter", sans-serif;
+  line-height: 1.6;
+  color: #0f3561;
+}
+
+.app {
+  /* needed for demo only */
+  margin: auto;
+  width: 560px;
+  height: 850px;
+  border: 12px solid #999aca;
+  border-radius: 48px;
+  overflow: hidden;
+  /* needed for demo only */
+  display: grid;
+  position: relative;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  grid-template-areas: "appbar" "content" "tabbar";
+  background-color: #87ba7b;
+}
+
+.appbar {
+  display: grid;
+  grid-area: appbar;
+  grid-template-areas: "controls-left title controls-right";
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 24px;
+}
+.appbar__controls-left {
+  grid-area: controls-left;
+}
+.appbar__title {
+  grid-area: title;
+}
+.appbar__title-text {
+  font-size: 1.2em;
+}
+.appbar__controls-right {
+  grid-area: controls-right;
+}
+.appbar--hero {
+  padding: 56px 24px;
+  background-color: #87ba7b;
+  grid-template-areas: "title title controls-right";
+}
+.appbar--hero .appbar__title-text {
+  font-size: 1.5em;
+  text-overflow: ellipsis;
+  overflow: clip;
+}
+
+.modal__topup {
+  position: absolute;
+  background: #abb8c8;
+  padding: 15px;
+  border-radius: 30px;
+  border: 3px solid #999aca;
+  right: 5px;
+  top: 110px;
+  display: none;
+}
+.modal__topup .modal__topup-form {
+margin-bottom: 15px;
+}
+.modal__topup .button { 
+display: inline-block;
+padding: 8px 12px;
+
+}
+
+.modal__topup .button#cancel {
+  background-color: red;
+} 
+.content {
+  grid-area: content;
+  height: 100%;
+  padding: 32px 24px;
+  background-color: #ffffff;
+}
+
+.scrollview {
+  overflow: auto;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.scrollview::-webkit-scrollbar {
+  width: 0px;
+}
+
+.backdrop {
+  border-radius: 24px;
+}
+
+.list__item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 0 24px;
+  border-bottom: 1px solid #c3cdd8;
+}
+.list__item:last-child {
+  border: none;
+}
+.list__item-footer {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+}
+.list__title {
+  margin-bottom: 16px;
+}
+.list__icon {
+  width: 75px;
+}
+
+.list__details {
+  width: 30%;
+}
+.list__details h3 {
+  font-size: 1em;
+  font-weight: 700;
+}
+.list__item {
+  flex-flow: row wrap;
+}
+.list__input {
+  width: 110px;
+  line-height: 2em;
+}
+.list__item.game-finished {
+  background: #ccc;
+}
+.button[disabled] {
+  background-color: #ddd;
+}
+.button {
+  border: none;
+  display: flex;
+  gap: 8px;
+  background-color: #5d8b72;
+  padding: 16px 24px;
+  font-weight: 500;
+  font-size: 1em;
+  border-radius: 24px;
+  color: #ffffff;
+  transition: ease-in 0.12s;
+}
+.button:active {
+  background-color: #517e6f;
+}
+.button--secondary {
+  color: #0f3561;
+  background-color: #c3cdd8;
+}
+.button--secondary:active {
+  background-color: #abb8c8;
+}
+.button--tertiary {
+  color: #0f3561;
+  background-color: #e2e7ec;
+}
+.button--tertiary:active {
+  background-color: #cfd7df;
+}
+
+.navigation {
+  display: flex;
+  gap: 52px;
+  justify-content: center;
+  padding: 16px 64px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  background-color: #87ba7b;
+}
+.navigation__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 16px 24px;
+  border-radius: 24px;
+}
+.navigation--item-current {
+  background-color: #5d8b72;
+  font-weight: 700;
+  color: #ffffff;
+}
