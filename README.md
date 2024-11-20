@@ -1,13 +1,9 @@
-# Sample Hardhat Project
+# A Sample Smart Contract Using Hardhat and Ignition
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+This project demonstrates a real life example of etherium network. It use ERC20 token and another Smart contract to establish betting logic using ERC20 token.
 
-Try running some of the following tasks:
+## Installation
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
+
 ```
